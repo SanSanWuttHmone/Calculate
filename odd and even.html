@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+          <label for="first">First Number</label><br>
+          <input type="text" id="first"><br>
+          <label for="second">Second Number</label><br>
+          <input type="text" id="second"><br>
+          <button type="button" id="btn" onclick="cal()">Submit</button>
+        
+      <label id="result"></label>
+      <script>
+          function cal(){
+            var num1=parseInt(document.getElementById("first").value);
+            var num2=parseInt(document.getElementById("second").value);
+            for(var i=num1; i<=num2; i++){
+               if(i===0){
+                   document.getElementById("result").innerHTML+=i +" " + "is even";
+               }
+               else if(i%2===0){
+                   document.getElementById("result").innerHTML+=i + " " + "is even";
+               }
+               else{
+                   document.getElementById("result").innerHTML+=i + " " + "is odd";
+               }
+            }
+          
+          }
+      </script>
+
+</body></html>
